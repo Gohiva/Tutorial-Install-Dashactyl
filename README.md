@@ -2,7 +2,6 @@
 
 ## Dependencias
 `apt update && apt upgrade`
-
 `apt install sudo`
 `apt install curl`
 
