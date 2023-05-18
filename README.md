@@ -2,15 +2,19 @@
 
 ## Dependencias
 `apt update && apt upgrade`
+
 `apt install sudo`
+
 `apt install curl`
 
 ## 1. Instalar NodeJS 14
 `curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -`
+
 `sudo apt -y install nodejs`
 
 ## 2. Clonar repositorios Dashactyl
 `apt install git`
+
 `git clone https://github.com/Votion-Development/Dashactyl-0.4.git`
 
 ## 3. Reverse Proxy
