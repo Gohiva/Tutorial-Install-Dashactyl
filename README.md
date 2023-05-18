@@ -49,8 +49,29 @@ server {
 
 sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/dashactyl.conf
 
-### Cambias el puerto de Dashactyl en el settings.json a 9999
+### Cambias el puerto de Dashactyl en el settings.json a 9999 (Mira el ejemplo)
 
+###### Antes
+```
+{
+  "version": "0.4.5",
+  "defaulttheme": "default",
+  "website": {
+    "port": 80,
+    "secret": "change this website session secret password, make sure to change this for your website's security"
+  },
+```
+###### Después
+```
+{
+  "version": "0.4.5",
+  "defaulttheme": "default",
+  "website": {
+    "port": 9999,
+    "secret": "change this website session secret password, make sure to change this for your website's security"
+  },
+```
+  
 ## 4. Obtener certificado
 sudo service nginx stop
 sudo certbot certonly --standalone -d dash-cloud.gohiva.es
