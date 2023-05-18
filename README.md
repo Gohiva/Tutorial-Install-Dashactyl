@@ -15,7 +15,7 @@ git clone https://github.com/Votion-Development/Dashactyl-0.4.git
 
 ## 3. Reverse Proxy
 nano /etc/nginx/sites-available/dashactyl.conf
-### (Pegas lo siguiente cambiando el <tu-dominio> por tu dominio)
+### (Pegas lo siguiente cambiando el "<tu-dominio>" por tu dominio)
 server {
   listen 80;
   server_name <tu-dominio>;
