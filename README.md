@@ -15,7 +15,7 @@ git clone https://github.com/Votion-Development/Dashactyl-0.4.git
 
 ## 3. Reverse Proxy
 nano /etc/nginx/sites-available/dashactyl.conf
-### (Pegas lo siguiente cambiando el "tu-subdominio" por tu subdominio para el Dash
+### Pegas lo siguiente cambiando el "tu-subdominio" por tu subdominio para el Dash
 ```
 server {
   listen 80;
@@ -45,11 +45,11 @@ server {
 }
 ```
   
-### (Haces Cntr+O, Enter y después Cntrl+X)
+### Haces Cntr+O, Enter y después Cntrl+X
 
 sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/dashactyl.conf
 
-### (Cambias el puerto de Dashactyl en el settings.json a 9999)
+### Cambias el puerto de Dashactyl en el settings.json a 9999
 
 ## 4. Obtener certificado
 sudo service nginx stop
