@@ -16,7 +16,7 @@ git clone https://github.com/Votion-Development/Dashactyl-0.4.git
 ## 3. Reverse Proxy
 nano /etc/nginx/sites-available/dashactyl.conf
 ### (Pegas lo siguiente cambiando el "tu-subdominio" por tu subdominio para el Dash
-`
+```
 server {
   listen 80;
   server_name tu-subdominio;
@@ -43,7 +43,7 @@ server {
     proxy_set_header X-Real-IP $remote_addr;
   }
 }
-`
+```
   
 ### (Haces Cntr+O, Enter y después Cntrl+X)
 
