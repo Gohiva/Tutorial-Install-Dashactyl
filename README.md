@@ -1,20 +1,20 @@
 # TUTORIAL INSTALAR DASHACTYL CON PTERODACTYL EN LA MISMA VPS
 
 ## Dependencias
-apt update && apt upgrade
-apt install sudo
-apt install curl
+`apt update && apt upgrade`
+`apt install sudo`
+`apt install curl`
 
 ## 1. Instalar NodeJS 14
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-sudo apt -y install nodejs
+`curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -`
+`sudo apt -y install nodejs`
 
 ## 2. Clonar repositorios Dashactyl
-apt install git
-git clone https://github.com/Votion-Development/Dashactyl-0.4.git
+`apt install git`
+`git clone https://github.com/Votion-Development/Dashactyl-0.4.git`
 
 ## 3. Reverse Proxy
-nano /etc/nginx/sites-available/dashactyl.conf
+`nano /etc/nginx/sites-available/dashactyl.conf`
 ### Pegas lo siguiente cambiando el "tu-subdominio" por tu subdominio para el Dash
 ```
 server {
@@ -47,7 +47,7 @@ server {
   
 ### Haces Cntr+O, Enter y después Cntrl+X
 
-sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/dashactyl.conf
+`sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/dashactyl.conf`
 
 ### Cambias el puerto de Dashactyl en el settings.json a 9999 (Mira el ejemplo)
 
@@ -73,12 +73,12 @@ sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/da
 ```
   
 ## 4. Obtener certificado
-sudo service nginx stop
-sudo certbot certonly --standalone -d dash-cloud.gohiva.es
-sudo service nginx start
+`sudo service nginx stop`
+`sudo certbot certonly --standalone -d dash-cloud.gohiva.es`
+`sudo service nginx start`
 
 ## 5. Iniciar el Dash
-cd Dashactyl-0.4
-npm install
-sudo npm install pm2 -g
-pm2 start index.js
+`cd Dashactyl-0.4`
+`npm install`
+`sudo npm install pm2 -g`
+`pm2 start index.js`
