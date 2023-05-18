@@ -79,7 +79,7 @@ server {
 ## 4. Obtener certificado
 `sudo service nginx stop`
 
-`sudo certbot certonly --standalone -d dash-cloud.gohiva.es`
+`sudo certbot certonly --standalone -d tusubdominio`
 
 `sudo service nginx start`
 
