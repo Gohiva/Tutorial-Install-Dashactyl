@@ -1,14 +1,14 @@
-### TUTORIAL INSTALAR DASHACTYL 
+# TUTORIAL INSTALAR DASHACTYL 
 
-# 1. Instalar NodeJS 14
+### 1. Instalar NodeJS 14
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 sudo apt -y install nodejs
 
-# 2. Clonar repositorios Dashactyl
+### 2. Clonar repositorios Dashactyl
 apt install git
 git clone https://github.com/Votion-Development/Dashactyl-0.4.git
 
-# 3. Reverse Proxy
+### 3. Reverse Proxy
 nano /etc/nginx/sites-available/dashactyl.conf
 (Pegas lo siguiente)
 server {
@@ -43,11 +43,11 @@ sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/da
 
 (Cambias el puerto de Dashactyl en el settings.json)
 
-# 4. Obtener certificado
+### 4. Obtener certificado
 sudo service nginx stop
 sudo certbot certonly --standalone -d dash-cloud.gohiva.es
 sudo service nginx start
 
-# 5. Iniciar el Dash
+### 5. Iniciar el Dash
 sudo npm install pm2 -g
 pm2 start Dashactyl-0.4/index.js
