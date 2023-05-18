@@ -15,18 +15,18 @@ git clone https://github.com/Votion-Development/Dashactyl-0.4.git
 
 ## 3. Reverse Proxy
 nano /etc/nginx/sites-available/dashactyl.conf
-### (Pegas lo siguiente cambiando el "<tu-dominio>" por tu dominio)
+### (Pegas lo siguiente cambiando el "tu-subdominio" por tu subdominio para el Dash)
 server {
   listen 80;
-  server_name <tu-dominio>;
+  server_name tu-subdominio;
   return 301 https://%24server_name%24request_uri/;
 }
 server {
   listen 443 ssl http2;
 
   server_name dash-cloud.gohiva.es;
-  ssl_certificate /etc/letsencrypt/live/<tu-dominio>/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/<tu-dominio>/privkey.pem;
+  ssl_certificate /etc/letsencrypt/live/tu-subdominio/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/tu-subdominio/privkey.pem;
   ssl_session_cache shared:SSL:10m;
   ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
   ssl_ciphers  HIGH:!aNULL:!MD5;
