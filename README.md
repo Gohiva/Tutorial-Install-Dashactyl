@@ -78,11 +78,16 @@ server {
   
 ## 4. Obtener certificado
 `sudo service nginx stop`
+
 `sudo certbot certonly --standalone -d dash-cloud.gohiva.es`
+
 `sudo service nginx start`
 
 ## 5. Iniciar el Dash
 `cd Dashactyl-0.4`
+
 `npm install`
+
 `sudo npm install pm2 -g`
+
 `pm2 start index.js`
