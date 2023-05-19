@@ -29,7 +29,7 @@ server {
 server {
   listen 443 ssl http2;
 
-  server_name dash-cloud.gohiva.es;
+  server_name tu-subdominio;
   ssl_certificate /etc/letsencrypt/live/tu-subdominio/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/tu-subdominio/privkey.pem;
   ssl_session_cache shared:SSL:10m;
