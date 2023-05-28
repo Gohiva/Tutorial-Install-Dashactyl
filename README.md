@@ -7,6 +7,8 @@
 
 `apt install curl`
 
+`apt instalo certbot`
+
 ## 1. Instalar NodeJS 14
 `curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -`
 
